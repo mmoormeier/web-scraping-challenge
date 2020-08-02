@@ -196,12 +196,19 @@ def scrape_info():
     hidef_hemisphere_link
 
     # Put it all together
-    mars_data = {'news_title' : news_title, 'news_p' : news_p, 'featured_image_url' : featured_image_url,             'mars_weather' : mars_weather, 'hemisphere_name' : hemisphere_name, 'hidef_hemisphere_link' :             hidef_hemisphere_link}
+    mars_data = {'news_title' : news_title, 'news_p' : news_p, 'featured_image_url' : featured_image_url, 'mars_weather' : mars_weather, 'hemisphere_name' : hemisphere_name, 'hidef_hemisphere_link' :             hidef_hemisphere_link}
+
+
+ # Close the browser after scraping
+    browser.quit()
+
+
+
 
     return mars_data
 
   
 
 
-print(scrape_info())
+
 
