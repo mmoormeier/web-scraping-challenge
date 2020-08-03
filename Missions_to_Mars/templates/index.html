@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Costa Rica Weather</title>
+  <title>Mission To Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -39,10 +39,10 @@
         <!-- Second column -->
         <div class="col-md-4">
           <h4>Current Weather on Mars</h4>
-          <p>{{ mars.mars_weather }}</p>
+          <p>{{ mars.mars_weather }}<br></p>
 
           <h4>Mars Facts</h4>
-          <p>{{ mars.mars_weather }}</p>
+          <p>{{ mars.mars_facts |safe }}</p>
           <!-- Table -->
         
         </div>  
@@ -53,16 +53,54 @@
   
         <!-- First column -->
         <div class="col-md-12">
-          {% for hemi in hemis %}
-          <li style="color:blue">{{ mars.hidef_hemisphere_link }}  {{ mars.hemisphere_name }}</li>
-        {% endfor %}
-
-          
+          <h2>Mars Hemispheres</h2>
         </div>
-       
-    </div>
-       
-         
+      </div>
+
+       <!-- Fourth Row --> 
+      <div class = "row">
+        <div class = "col-md-6" style = "padding: 10px">
+          <div class = "card">
+            <img class = "img-responsive" src={{mars.hidef_hemisphere_link.0}}/full.jpg>
+            <div class = "card-body">
+              <h3 class = "card-title">
+                {{mars.hemisphere_name.0}}
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class = "col-md-6" style = "padding: 10px">
+          <div class = "card">
+            <img class = "img-responsive" src={{mars.hidef_hemisphere_link.1}}/full.jpg>
+            <div class = "card-body">
+              <h3 class = "card-title">
+                {{mars.hemisphere_name.1}}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-md-6" style = "padding: 10px">
+          <div class = "card">
+            <img class = "img-responsive" src={{mars.hidef_hemisphere_link.2}}/full.jpg>
+            <div class = "card-body">
+              <h3 class = "card-title">
+                {{mars.hemisphere_name.2}}
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class = "col-md-6" style = "padding: 10px">
+          <div class = "card">
+            <img class = "img-responsive" src={{mars.hidef_hemisphere_link.3}}/full.jpg>
+            <div class = "card-body">
+              <h3 class = "card-title">
+                {{mars.hemisphere_name.3}}
+              </h3>
+            </div>
+          </div>
+        </div>   
        
 
 
